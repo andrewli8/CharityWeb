@@ -19,10 +19,12 @@ limitations under the License.
 /* CONTAINERS */
 p {
   padding: 35px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 input[type=text], select {
-  width: 100%;
+  width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -32,7 +34,7 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  width: 100%;
+  width: 30%;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -48,11 +50,12 @@ input[type=submit]:hover {
 
 div {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   padding: 53px;
 }
 
 body {
+  background-color: f2f2f2;
   color: #222;
   font: 13px/18px arial, sans-serif;
   margin: 0;
