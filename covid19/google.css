@@ -58,6 +58,7 @@ body {
 
 li {
     display: inline;
+    margin-left: 3em;
 }
 
 ul {
