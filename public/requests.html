@@ -17,29 +17,30 @@
 
         <div class="center"><h1>Requests</h1></div>
 
-        <form action="/action_page.php">
-        <label for="item">Item:</label>
-        <input type="text" id="item" name="item"><br><br>
-        <label for="inventory">Inventory:</label>
-        <input type="text" id="inventory" name="inventory"><br><br>
-        <label for="purpose">Purpose:</label>
-        <input type="text" id="purpose" name=purpose><br><br>
-        <label for="org">Organization:</label>
-        <input type="text" id="org" name="org"><br><br>
-
-        <p class="formfield">
-        <label for=contact>Contact Info:</label>
-        <textarea id="contact" placeholder="Enter address, email, and/or phone number" rows="4" cols="50"></textarea><br><br>
-        </p>
-        <label for="urgency">Choose urgency:</label>
-        <select id="urgency">
-            <option value="critical">Critical</option>
-            <option value="high">High</option>
-            <option value="medium">Medium</option>
-            <option value="low">Low</option>
-        </select><br><br>
-        &emsp;<input type="submit" value="Submit">
-        </form> 
+        <div>
+          <form action="/action_page.php">
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item"><br><br>
+            <label for="inventory">Inventory:</label>
+            <input type="text" id="inventory" name="inventory"><br><br>
+            <label for="purpose">Purpose:</label>
+            <input type="text" id="purpose" name=purpose><br><br>
+            <label for="org">Organization:</label>
+            <input type="text" id="org" name="org"><br><br>
+            <label for=contact>Contact Info:</label><br>
+            <textarea id="contact" placeholder="Enter address, email, and/or phone number" rows="4" cols="50"></textarea><br><br>
+            <label for="urgency">Urgency Level</label>
+            <select id="urgency">
+              <option value="usa">Critical</option>
+              <option value="usa">High</option>
+              <option value="usa">Medium</option>
+              <option value="usa">Low</option>
+            </select>
+          
+            </select><br><br>
+            &emsp;<input type="submit" value="Submit">
+          </form>
+        </div>
 
     </body>
 </html>
