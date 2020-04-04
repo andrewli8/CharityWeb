@@ -7,6 +7,8 @@
 
     <body>
         <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Keyword search...">
+        <button onclick="myCreateFunction()">Create row</button>
+        <button onclick="myDeleteFunction()">Delete row</button>
         <table id="myTable">
             <tr class="header">
              <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
@@ -83,9 +85,6 @@
             </tr>
           </table>
           <script src="../src/client/main.js"></script>
-
-          <button onclick="myCreateFunction()">Create row</button>
-          <button onclick="myDeleteFunction()">Delete row</button>
 
           <script>
             function myCreateFunction() {
