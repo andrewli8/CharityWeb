@@ -40,6 +40,24 @@
               <option value="usa">Medium</option>
               <option value="usa">Low</option>
             </select>
+
+            <script>
+              var item = document.getElementById("item").value;
+              var inv = document.getElementById("inventory").value;
+              var purp = document.getElementById("purpose").value;
+              var org = document.getElementById("org").value;
+              var cont = document.getElementById("contact").value;
+              var urg = document.getElementById("urgency").value;
+
+              var json = `{
+                "item": "${item}",
+                "inventory": "${inv}",
+                "purpose": "${purp}",
+                "org": "${org}",
+                "contact": "${cont}",
+                "urgency": "${urg}"
+              }`
+            </script>
           
             <!-- CSS for the button -->
             <br><br>
