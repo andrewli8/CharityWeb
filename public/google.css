@@ -24,7 +24,7 @@ body {
   margin: 0;
 }
 
-.formfield {
+.formfield * {
   vertical-align: middle;
 }
 
