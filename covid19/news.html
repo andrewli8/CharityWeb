@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>News</title>
+        <style>
+          .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50;
+          }
+        </style>
+        <img src="logo.png" alt="Logo" class="center" style="width:200px;height:200px;">
         <link rel="stylesheet" href="google.css">
     </head>
+
+    <style>
+    u1 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid #e7e7e7;
+      background-color: #f3f3f3;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #ddd;
+    }
+
+    li a.active { 
+      color: white;
+      background-color: #4CAF50;
+    }
+
     <body>
 
+      </style>
+
         <ul>
-            <li><font size = "5"><a href="main.html">Home</a></font></li>
-            <li><font size = "5"><a href="news.html">News</a></font></li>
-            <li><font size = "5"><a href="contact.html">Contact</a></font></li>
-            <li><font size = "5"><a href="about.html">About</a></font></li>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="updates.html">Update</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
 
         <div class="center"><h1>News</h1></div>
 
-        <p>Yo, Andy is big gay.</p>
+        <p>News</p>
     </body>
 </html>
