@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="google.css">
+        <script src="/dist/main.js"></script>
+    </head>
+
+    <body>
+        <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Keyword search...">
+        <table id="myTable">
+            <tr class="header">
+             <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+              <th onclick="sortTable(0)">Item</th>
+              <th onclick="">Inventory</th>
+              <th onclick="">Purpose</th>
+              <th onclick="sortTable(3)">Organization</th>
+              <th onclick="">Contact Information</th>
+              <th onclick="sortTable(5)">Urgency</th>
+            </tr>
+            <tr>
+                <td>Canned goods</td>
+                <td>20/50</td>
+                <td>Food for patients</td>
+                <td>Mercy Hospital St. Louis</td>
+                <td>Address</td>
+                <td>Critical</td>
+            </tr>
+            <tr>
+                <td>Hand sanitizer/soap</td>
+                <td>18/50</td>
+                <td>Food for patients</td>
+                <td>Mercy Hospital St. Louis</td>
+                <td>Address</td>
+                <td>Medium</td>
+            </tr>
+            <tr>
+                <td>Anti-microbial gloves</td>
+                <td>40/50</td>
+                <td>Food for patients</td>
+                <td>Mercy Hospital St. Louis</td>
+                <td>Address</td>
+                <td>Low</td>
+            </tr>
+            <tr>
+              <td>Anti-microbial gloves</td>
+              <td>40/50</td>
+              <td>Food for patients</td>
+              <td>Mercy Hospital St. Louis</td>
+              <td>Address</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td>Anti-microbial gloves</td>
+              <td>40/50</td>
+              <td>Food for patients</td>
+              <td>Mercy Hospital St. Louis</td>
+              <td>Address</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td>Anti-microbial gloves</td>
+              <td>40/50</td>
+              <td>Food for patients</td>
+              <td>Mercy Hospital St. Louis</td>
+              <td>Address</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td>Anti-microbial gloves</td>
+              <td>40/50</td>
+              <td>Food for patients</td>
+              <td>Mercy Hospital St. Louis</td>
+              <td>Address</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td>Anti-microbial gloves</td>
+              <td>40/50</td>
+              <td>Food for patients</td>
+              <td>Mercy Hospital St. Louis</td>
+              <td>Address</td>
+              <td>Low</td>
+            </tr>
+          </table>
+          <script src="../src/client/main.js"></script>
+
+          <button onclick="myCreateFunction()">Create row</button>
+          <button onclick="myDeleteFunction()">Delete row</button>
+
+          <script>
+            function myCreateFunction() {
+              var table = document.getElementById("myTable");
+              var row = table.insertRow(1);
+              var cell1 = row.insertCell(0);
+              var cell2 = row.insertCell(1);
+              var cell3 = row.insertCell(2);
+              var cell4 = row.insertCell(3);
+              var cell5 = row.insertCell(4);
+              var cell6 = row.insertCell(5);
+              cell1.innerHTML = "item";
+              cell2.innerHTML = "quantity";
+              cell3.innerHTML = "purpose";
+              cell4.innerHTML = "organization";
+              cell5.innerHTML = "contact";
+              cell6.innerHTML = "urgency";
+            }
+            
+            function myDeleteFunction() {
+              document.getElementById("myTable").deleteRow(1);
+            }
+          </script>
+
+    </body>
+</html>
