@@ -20,7 +20,61 @@
         <!-- Current page title-->
         <div class="center"><h1>News</h1></div>
 
-        <!-- Content -->
-        <p>News</p>
+        <!-- CanvasJS Spline Graph -->
+        <head>  
+        <script>
+        window.onload = function () {
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,  
+            theme: "light2",
+            title:{
+                text: "US Corona Cases",
+                fontSize:20
+            },
+            axisX: {
+                includeZero: true,
+                crosshair: {
+                    enabled: true,
+                    snapToDataPoint: true
+                }
+            },
+            axisY: {
+                includeZero: true, 
+            },
+            data: [{
+                color: "red",
+                yValueFormatString: "#,### Cases",
+                xValueFormatString: "DD MMM YYYY",
+                markerType: "square",
+                type: "spline",
+                dataPoints: [
+                    {x: new Date(2020, 2, 6), y: 344},
+                    {x: new Date(2020, 2, 8), y: 581},
+                    {x: new Date(2020, 2, 10), y: 1047},
+                    {x: new Date(2020, 2, 12), y: 1716},
+                    {x: new Date(2020, 2, 14), y: 2972},
+                    {x: new Date(2020, 2, 16), y: 4644},
+                    {x: new Date(2020, 2, 18), y: 8665},
+                    {x: new Date(2020, 2, 20), y: 19592},
+                    {x: new Date(2020, 2, 22), y: 35095},
+                    {x: new Date(2020, 2, 24), y: 55352},
+                    {x: new Date(2020, 2, 26), y: 85998},
+                    {x: new Date(2020, 2, 28), y: 124465},
+                    {x: new Date(2020, 2, 30), y: 164212},
+                    {x: new Date(2020, 3, 1), y: 216249},
+                    {x: new Date(2020, 3, 3), y: 278362}
+                ]
+            }]
+        });
+        chart.render();
+
+        }
+        </script>
+        </head>
+        <body>
+        <div id="chartContainer" style="height: 350px; width: 83%;"></div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </body>
     </body>
 </html>
