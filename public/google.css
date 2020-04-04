@@ -17,6 +17,9 @@ limitations under the License.
 */
 
 /* CONTAINERS */
+p {
+  padding: 35px;
+}
 
 input[type=text], select {
   width: 100%;
@@ -46,7 +49,7 @@ input[type=submit]:hover {
 div {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 60px;
+  padding: 53px;
 }
 
 body {
