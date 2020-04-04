@@ -24,10 +24,6 @@ body {
   margin: 0;
 }
 
-.formfield * {
-  vertical-align: middle;
-}
-
 .sidebar {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
