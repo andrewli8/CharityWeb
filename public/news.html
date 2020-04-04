@@ -12,7 +12,6 @@
         <ul>
             <li><a href="main.html">Home</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="requests.html">Requests</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
@@ -32,6 +31,9 @@
                 text: "US Corona Cases",
                 fontSize:20
             },
+            tooltip: {
+                enabled: true
+            },
             axisX: {
                 includeZero: true,
                 crosshair: {
@@ -47,6 +49,7 @@
                 yValueFormatString: "#,### Cases",
                 xValueFormatString: "DD MMM YYYY",
                 markerType: "square",
+                markerBorderColor: "black",
                 type: "spline",
                 dataPoints: [
                     {x: new Date(2020, 2, 6), y: 344},
