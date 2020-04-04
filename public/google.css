@@ -90,6 +90,13 @@ body {
   padding: 10px;
 }
 
+.centerimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 li {
   display: inline;
   margin-left: 3em;
