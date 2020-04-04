@@ -1,16 +1,18 @@
 const express = require('express');
 const morgan = require('morgan');
 const passport = require('passport');
+const session = require("express-session");
+const bodyParser = require("body-parser");
+require('./auth.js');
 
 let data = [];
 
 const app = express();
-
-app.use(morgan('tiny '));
-app.use(express.json());
-app.use('/', express.static('covid19', {index: 'main.html'}));
-
-app.get('')
+app.use(morgan('tiny'));
+app.use(express.static('public', {index: 'main.html'}));
+app.use(bodyParser.json());
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get('/auth/google',
   passport.authenticate('google', { scope: ['profile'] }));
