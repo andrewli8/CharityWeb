@@ -7,6 +7,55 @@
 
     <body>
         <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Keyword search...">
+        <button id="myBtn">Create request</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="center">
+              <label for="item">Item:</label><br>
+              <input type="text" id="item" name="item"><br><br>
+              <label for="inventory">Inventory:</label><br>
+              <input type="text" id="inventory" name="inventory"><br><br>
+              <label for="purpose">Purpose:</label><br>
+              <input type="text" id="purpose" name=purpose><br><br>
+              <label for="org">Organization:</label><br>
+              <input type="text" id="org" name="org"><br><br>
+              <label for=contact>Contact Info:</label><br>
+              <textarea id="contact" placeholder="Enter address, email, and/or phone number" rows="4" cols="40"></textarea><br><br>
+              <label for="urgency">Urgency Level</label><br>
+              <select id="urgency">
+                <option value="usa">Critical</option>
+                <option value="usa">High</option>
+                <option value="usa">Medium</option>
+                <option value="usa">Low</option>
+              </select>
+              <div class="center">
+              <button >Submit</button></div>
+              </div>
+          </div>
+          <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+        </div>
         <button onclick="myCreateFunction()">Create row</button>
         <button onclick="myDeleteFunction()">Delete row</button>
         <table id="myTable">
@@ -106,6 +155,34 @@
             
             function myDeleteFunction() {
               document.getElementById("myTable").deleteRow(1);
+            }
+
+            function mySubmitFunction() {
+              var item = document.getElementById("item").value;
+              var inv = document.getElementById("inventory").value;
+              var purp = document.getElementById("purpose").value;
+              var org = document.getElementById("org").value;
+              var cont = document.getElementById("contact").value;
+              var urg = document.getElementById("urgency").value;
+  
+              var json = `{
+                "item": "${item}",
+                "inventory": "${inv}",
+                "purpose": "${purp}",
+                "org": "${org}",
+                "contact": "${cont}",
+                "urgency": "${urg}"
+              }`
+              // When the user clicks on <span> (x), close the modal
+              span.onclick = function() {
+                modal.style.display = "none";
+              }
+              // When the user clicks anywhere outside of the modal, close it
+              window.onclick = function(event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
+              }
             }
           </script>
 
